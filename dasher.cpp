@@ -15,6 +15,10 @@ bool isOnGround(AnimData data, int windowHeight)
     return data.pos.y >= windowHeight - data.rec.height;
 }
 
+void Setup() {
+
+}
+
 AnimData updateAnimData(AnimData data, float deltaTime, int cols, int rows, int maxFrame) {
     data.runningTime += deltaTime;
 
@@ -49,7 +53,7 @@ int main()
     Texture2D foreground = LoadTexture("textures/foreground.png");
 
     //Nebula data
-    const int sizeOfNebulae{3};
+    const int sizeOfNebulae{10};
     AnimData nebulae[sizeOfNebulae] {};
     Color nebulaColors[6] {WHITE, RED, GREEN, YELLOW, PINK, BLUE};
 
